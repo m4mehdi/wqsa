@@ -1,0 +1,30 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+    <div>
+        <form action="." method="POST" enctype="multipart/form-data">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <button type="submit">Upload File</button>
+        </form>
+        <br></br>
+        <body>Columns Order:</body>
+        <style>
+            table, th, td {
+              border: 1px solid white;
+              border-collapse: collapse;
+              background-color : gray;
+            }
+        </style>
+        <table style="width:100%">
+            <tr>
+              <th>English Title</th>
+              <th>Farsi Title</th>
+              <th>URL</th>
+              <th>IP</th>
+              <th>Location</th>
+              <th>CDN Provider's Title</th>
+              <th>Subject</th>
+            </tr>
+    </div>
+{% endblock %}
